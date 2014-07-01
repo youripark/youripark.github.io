@@ -2,10 +2,18 @@
 body {
   height:100%;
   color: #000000;
+  background-color: #E5DBCF;
 }
 
 a {
   color: #000000;
+}
+
+div.vertical-line {
+  border-left: 2px solid black;
+  height: 98%;
+  margin-left: 290pt;
+  position: fixed;
 }
 
 #line {
@@ -15,7 +23,7 @@ a {
   min-height: 100%;
 }
 
-#top {
+#left {
   position: fixed;
   float: left;
   top: 0px;
@@ -27,7 +35,7 @@ a {
   display: table;
 }
 
-#top a{
+#left a{
   margin: 1px;
   text-align: center;
   text-decoration: none;
@@ -36,18 +44,18 @@ a {
   width: 240px;
 }
 
-#top a:hover{
+#left a:hover{
   cursor:pointer;
 }
 
 h1.header {
   font-variant: small-caps;
-  margin-left: 400px;
+  margin-left: 50px;
 }
 
 
 #body {
-  margin-left: 430px;
+  margin-left: 50px;
   margin-top: 60px;
 }
 
