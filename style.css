@@ -2,7 +2,8 @@
 body {
   height:100%;
   color: #000000;
-  background-color: #E5DBCF;
+  background-color: #D9D9D9;
+  font-family: Verdana;
 }
 
 a {
@@ -11,9 +12,12 @@ a {
 
 div.vertical-line {
   border-left: 2px solid black;
-  height: 98%;
+  height: 100%;
   margin-left: 290pt;
-  position: fixed;
+}
+
+#daleft{
+  border-right: 2px solid black;
 }
 
 #line {
@@ -28,7 +32,7 @@ div.vertical-line {
   float: left;
   top: 0px;
   font-size: 20pt;
-  height: 200px;
+  height: 100%;
   width: 240px;
   margin-top: 180pt;
   margin-left: 50pt;
@@ -49,14 +53,28 @@ div.vertical-line {
 }
 
 h1.header {
-  font-variant: small-caps;
   margin-left: 50px;
 }
 
 
 #body {
   margin-left: 50px;
-  margin-top: 60px;
+  margin-top: 25px;
+  position: relative;
+}
+
+section.about {
+  margin-top: 50pt;
+  margin-bottom: 50pt;
+}
+
+img {
+  margin-top: 10pt;
+  margin-bottom: 10pt;
+}
+
+ul {
+  margin-left: -15pt;
 }
 
 
@@ -67,4 +85,5 @@ strong {
 em {
   font-style: italic;
 }
+
 
