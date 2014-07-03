@@ -35,8 +35,8 @@ div.vertical-line {
   margin-left: 50pt;
   display: table;
   table-layout: fixed;
-  border-right: 2px solid;
-  border-color: #98777B;
+  border-right: 2px solid
+;  border-color: #98777B;
   border-top: 1%
 }
 
@@ -74,9 +74,7 @@ section.about {
 
 
 #dari-body {
-  margin-left: 50px;
   margin-top: 25px;
-  position: relative;
   max-width: 900pt;
 }
 
@@ -89,6 +87,7 @@ div.left-nav {
 img {
   margin-top: 10pt;
   margin-bottom: 10pt;
+  margin-right: 46pt;
 }
 
 ul {
