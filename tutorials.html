@@ -15,7 +15,9 @@
   </div>
 </nav>
 
+
 <div class="vertical-line" />
+<div class="a" />
 
 </head>
 
@@ -26,7 +28,33 @@
 
 <section id="body">
 
-<p>Coming soon!</p>
+<h2>Submitting Assignments</h2>
+
+<p><strong>For Macs and Linux</strong></p>
+
+<p>After you are done with your assignment, you need to copy the file from your computer to your CS61A instructional account. To do this, you should (in your terminal) move to the directory that has the assignment you want to submit. </p>
+
+<p>Next, you want to scp (or copy) the file over to your server account.</p>
+
+<code>scp lab00.py cs61a-xx@cory.eecs.berkeley.edu:~</code>
+
+<p>This will copy your file to the home directory of your CS61A account. If you want to move it to a specific folder, ie. /labs/lab00, you add the specific directory after the ~</p>
+
+<code>scp lab00.py cs61a-xx@cory.eecs.berkeley.edu:~/labs/lab00</code>
+
+<p>To submit your assignment, log into your instructional account</p>
+
+<code>ssh cs61a-xx@cory.eecs.berkeley.edu</code>
+
+<p>After logging into your account, you should move to the directory that contains your assignment. Once you've moved to the correct directory, you can now submit!</p>
+
+<code>submit lab00</code>
+
+<p>Note that you do not need to add the .py tag. </p>
+
+<p>If you want to double-check that your submission worked, you can type in:</p>
+
+<code>glookup -t</code>
 
 
 </section>
