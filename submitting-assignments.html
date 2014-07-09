@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel='stylesheet' type='text/css' href='style.css'>
+  <title> Youri's CS61A TA Website </title>
+
+<nav id="left">
+  <div class="left-nav">
+  <a href="index.html">main</a>
+  <a href="about.html">about youri</a>
+  <a href="tutorials.html">tutorials</a>
+  <a href="practice.html">practice problems</a>
+  <a href="dari.html">dari the cat</a>
+  <a href="resources.html">resources</a>  
+  </div>
+</nav>
+
+
+<div class="vertical-line" />
+<div class="a" />
+
+</head>
+
+<body>
+
+
+<h1 class="header">Submitting Assignments</h1>
+
+<section id="body">
+
+<h2><strong>For Macs and Linux</strong></h2>
+
+<p>After you are done with your assignment, you need to copy the file from your computer to your CS61A instructional account. To do this, you should (in your terminal) move to the directory that has the assignment you want to submit. </p>
+
+<p>Next, you want to scp (or copy) the file over to your server account.</p>
+
+<code>scp lab00.py cs61a-xx@cory.eecs.berkeley.edu:~</code>
+
+<p>This will copy your file to the home directory of your CS61A account. If you want to move it to a specific folder, ie. /labs/lab00, you add the specific directory after the ~</p>
+
+<code>scp lab00.py cs61a-xx@cory.eecs.berkeley.edu:~/labs/lab00</code>
+
+<p>To submit your assignment, log into your instructional account</p>
+
+<code>ssh cs61a-xx@cory.eecs.berkeley.edu</code>
+
+<p>After logging into your account, you should move to the directory that contains your assignment. Once you've moved to the correct directory, you can now submit!</p>
+
+<code>submit lab00</code>
+
+<p>Note that you do not need to add the .py tag. </p>
+
+<p>If you want to double-check that your submission worked, you can type in:</p>
+
+<code>glookup -t</code>
+
+
+<h2><strong>For Windows</strong></h2>
+
+<p><em>The instructions here assume you've already downloaded and set-up PuTty and WinSCP. If you haven't, check out <a href="http://www-inst.eecs.berkeley.edu/~cs61a/su14/lab/lab00/lab00.html">lab00</a>.</em></p>
+
+<p>First, transfer your .py files from your computer to the server by logging in via WinSCP and copying files over to your class account.</p>
+
+<p>Next, log into your instructional account via PuTTY. After logging into your account, you should move to the directory that contains your assignment. Once you've moved to the correct directory, you can now submit!</p>
+
+<code>submit lab00</code>
+
+<p>Note that you do not need to add the .py tag. </p>
+
+<p>If you want to double-check that your submission worked, you can type in:</p>
+
+<code>glookup -t</code>
+
+
+</section>
+    
+  </body>
+
+  
+</html>
