@@ -26,22 +26,196 @@
 
 <h1 class="header">Practice Problems</h1>
 
-<section id="body">
+<section id="body" class="practice">
 
-<p>Work in progress! Check out <a href="http://albertwu.org/cs61a/review/mt1">Albert Wu's Midterm 1 practice problems</a> for now. And <a href="http://www.ocf.berkeley.edu/~shidi/cs61a/wiki/Practice_problems">the CS61A wiki</a>. Don't worry about "Tuples"</p>
+<p>Work in progress! Check out <a href="http://albertwu.org/cs61a/">Albert Wu's practice problems</a> for now. And <a href="http://www.ocf.berkeley.edu/~shidi/cs61a/wiki/Practice_problems">the CS61A wiki</a>.</p>
 
-<!--
-<ul>
-	<li>Functions and Evaluation</li>
-	<li>Environment Diagrams</li>
-	<li>Lambda Functions</li>
-	<li>Higher Order Functions</li>
-	<li>Recursion</li>
-	<li>Linked Lists</li>
-	<li>Data and Sequences</li>
-	<li>Data Abstraction</li>
-</ul>
+
+<h2>Environment Diagrams!</h2>
+<p>For answers, check <a href="http://pythontutor.com/composingprograms.html#mode=edit">python tutor</a></p>
+
+<h3>Question 1</h3>
+<code>
+<div class="code">
+<div>
+<div>def apple(sauce):</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;pear = 2</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;return lambda: sauce - 5</div>
+</div>
+<br/>
+<div>
+<div>def pear(jam):</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;pear = 4</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;return jam(pear)</div>
+</div>
+<br/>
+<div>apple_sauce = pear(apple)</div>
+<div>apple_sauce()</div>
+</div>
+</code>
+
+<h3>Question 2</h3>
+<code>
+<div class="code">
+<div>
+<div>def wow(how):</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;return lambda wow: lambda bow: how + wow * bow</div>
+</div>
+<br/>
+<div>
+<div>def how(wow):</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;def mow():</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return wow</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;return mow</div>
+</div>
+<br/>
+<div>howie = how(5)</div>
+<div>wowie = wow(howie())</div>
+<div>bowie = wowie(how(7)())</div>
+<div>bowie(2)</div>
+</div>
+</code>
+
+<h3>Question 3</h3>
+<code>
+<div class="code">
+<div>
+<div>def meow(cat):</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;def dog(bark):</div>
+  	<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nonlocal cat</div>
+  	<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cat += 'meow'</div>
+  	<div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return bark(cat)</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;return dog</div>
+</div>
+<br/>
+<div>hank = lambda: 'rawr'</div>
+<div>noise = meow('mew')</div>
+<div>noise(lambda animal: animal)</div>
+</div>
+</code>
+
+<h3>Question 4</h3>
+<code>
+<div class="code">
+<div>
+<div>def shocker(n):</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;charge = lambda f: lambda: f() * 2</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;thunder = lambda: n</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;def shock(power):</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nonlocal charge, thunder</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if power:</div>
+      <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thunder = charge(thunder)</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return thunder()</div>
+  <div>&nbsp;&nbsp;&nbsp;&nbsp;return shock</div>
+</div>
+<br/>
+<div>pikachu = shocker(120)</div>
+<div>damage = pikachu('PIKACHUUUUUUU!')</div>
+</div>
+
+</code>
+
+<h3>Question 5, courtesy of DJFOOOTE</h3>
+<code>
+<div class="code">
+<div># Do you want to know what it schwas?</div>
+<br/>
+<div>def hashmeer(schwiggity):</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;def cannot_heer_yuo(my_ear):</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;my_pants = my_ear[::7]</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return my_pants</div>
+<br/>
+        
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;def cant_do_it(schwoggity):</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nonlocal cant_do_it</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cant_do_it = schwoggity(schwiggity)</div>
+        <div>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;return cant_do_it(schwiggity + "WHAT YOU SAY? ")</div>
+<br/>
+    
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;return cannot_heer_yuo, cant_do_it</div>
+<br/>
+
+<div>schfifty, five = hashmeer('pff. ')</div>
+<div>scheven = five(lambda schfourteen: lambda teen: schfifty)</div>
+<div>scheven('poopty peupty pants.')</div>
+</div>
+</code>
+
+
+<h2>List Comprehensions</h2>
+<p>Remember that list comprehensions are created in this format: </p>
+<code>[&lt;expression&gt; for &lt;value&gt; in &lt;sequence&gt;]</code>
+
+<h3>Question 1</h3>
+<code><p>Using list comprehensions, create a list that contains
+all the odd numbers from 1 to n</p></code>
+
+<h3>Question 2</h3>
+<code><p>Using list comprehensions, create a list that contains
+all the numbers from 1 to n that are prime numbers, given an
+isPrime(x) function
+</p></code>
+
+<h3>Question 3</h3>
+<code><p>Using list comprehensions, create a list that returns a list
+with numbers after it goes through the do_something(x) function
+</p></code>
+
+<h3>Question 4</h3>
+<code><p>Using list comprehensions, create a list that returns a list
+with numbers after it goes through the do_something(x) function
+only if the number is divisible by 3
+</p></code>
+
+<!--<h3>Question 5</h3>
+<code><p>Using list comprehensions, create a list that returns a list
+of linkedlists of something
+</p></code>
 -->
+
+<br/>
+
+<h2>HOF List Comprehensions using the reduce function</h2>
+
+<h3>What Would Python Output?</h3>
+
+<code>
+<div class="code">
+<div>>>> from functools import reduce</div>
+<div>>>> tup = (1, 2, 3)</div>
+<br/>
+<div>>>> reduce(lambda x, y: x + y, tup, 100)</div><br/><br/>
+
+<div>>>> reduce(lambda x, y: (x, y), tup)</div><br/><br/>
+
+<div>>>> reduce(lambda x, y: y + x, "hello world!")</div><br/><br/>
+
+<div>>>> reduce(lambda x, y: x + y, map(lambda x: x**2, tup))</div><br/><br/>
+</div><br/>
+</code>
+
+<h3>Create the reduce function</h3>
+
+<p>Implement a function reduce that acts just like the built-in reduce. (taken from Albert's
+	website)</p>
+
+<code>
+<div class="code">
+<div>def reduce(combiner, seq):</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;"""Acts just like the built-in reduce function.</div>
+    <br/>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;>>> seq = (1, 2, 3, 4, 5, 6)</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;>>> reduce(lambda x, y: x + y, seq)</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;21</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;>>> reduce(lambda x, y: x * y, (1, 2, 3, 4))</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;24</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;"""</div>
+    <div>&nbsp;&nbsp;&nbsp;&nbsp;"*** YOUR CODE HERE ***"</div>
+</div>
+</code>
+
+<br/>
+<br/>
 
 
 </section>
